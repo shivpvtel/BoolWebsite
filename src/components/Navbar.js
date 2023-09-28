@@ -29,8 +29,8 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-         <img src="/images/boolfinal.ico" alt="bool" className="logo-image" />  
-           <div className='ool-text'> OOL </div>
+         {/* <img src="/images/boolfinal.ico" alt="bool" className="logo-image" />   */}
+           <div className='ool-text'> BOOL </div>
           
         </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -44,22 +44,23 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/services'
+                to='/aboutus'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/contactus'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Meet the Team
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Download
-              </Link>
-            </li>
+            
 
             <li>
               <Link
@@ -67,11 +68,11 @@ function Navbar() {
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                Download
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline'>Download</Button>}
         </div>
       </nav>
     </>

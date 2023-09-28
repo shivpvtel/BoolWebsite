@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 function HeroSection() {
   return (
@@ -10,19 +11,20 @@ function HeroSection() {
     <h1>BE ON OUR LINE</h1>
     <p>What are you waiting for?</p>
     <div className='hero-btns'>
-     <Button className='btn' buttonStyle='btn--outline' buttonSize='btn--large'>
-        DOWNLOAD (Coming Soon)
+   
+     <Button className='download' buttonStyle='btn--outline' buttonSize='btn--large'>
+     
+          Download
+        
       </Button>
-  
-    
-      <Button
-        className='btn'
-        buttonStyle='btn--primary'
-        buttonSize='btn--large'
-        // onClick={console.log('hey')}
+      
+      {/* <Button to='/components/pages/SignUp' className='team' buttonStyle='btn--primary' buttonSize='btn--large'
+      
       >
-        MEET THE TEAM {/*<i className='far fa-play-circle' /> */}
-      </Button>
+          MEET THE TEAM
+      
+      </Button> */}
+        
     </div>
   </div>
   );

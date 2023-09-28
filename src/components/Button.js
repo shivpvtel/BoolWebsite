@@ -1,7 +1,6 @@
 // import React from 'react';
 // import './Button.css';
 // import { Link } from 'react-router-dom';
-
 // export function Button() {
 //   return (
 //     <Link to='sign-up'>
@@ -28,18 +27,19 @@ export const Button = ({
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];
+    
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to='/sign-up' className='btn-mobile'>
-      <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
-        type={type}
-      >
-        {children}
-      </button>
-    </Link>
-  );
+    <a href='https://apple.com/appstore' target='_blank' rel='noopener noreferrer' className='btn-mobile'>
+    <button
+      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+      onClick={onClick}
+      type={type}
+    >
+      {children}
+    </button>
+  </a>
+      );
 };
